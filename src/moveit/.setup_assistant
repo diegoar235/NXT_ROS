@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: lego_robot
+    relative_path: src/urdf/assembly.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/assembly.srdf
+  CONFIG:
+    author_name: tablet.235.13@tablet.com
+    author_email: tablet.235.13@tablet.com
+    generated_timestamp: 1679144073

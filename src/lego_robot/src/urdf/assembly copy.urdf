@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="assembly">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0896592777817382 -7.1640281346097E-09 0.0546361422508456"
+        rpy="0 0 0" />
+      <mass
+        value="1.40770138056216" />
+      <inertia
+        ixx="0.5"
+        ixy="0.5"
+        ixz="0.5"
+        iyy="0.5"
+        iyz="0.5"
+        izz="0.5" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lego_robot/meshes/visual/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.937254901960784 0.137254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lego_robot/meshes/collision/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Base">
+    <inertial>
+      <origin
+        xyz="-0.00575173694296013 -6.93889390390723E-17 0.0591791559608066"
+        rpy="0 0 0" />
+      <mass
+        value="1.3785053243272" />
+      <inertia
+        ixx="0.5"
+        ixy="0.5"
+        ixz="0.5"
+        iyy="0.5"
+        iyz="0.5"
+        izz="0.5" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lego_robot/meshes/visual/Base.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lego_robot/meshes/collision/Base.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Hombro"
+    type="revolute">
+    <origin
+      xyz="-0.088 0 0.0865"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Base" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.571"
+      upper="1.571"
+      effort="10"
+      velocity="10" />
+  </joint>
+  <link
+    name="Brazo">
+    <inertial>
+      <origin
+        xyz="-0.00117989341028664 -6.45935206126935E-06 0.0850293849518958"
+        rpy="0 0 0" />
+      <mass
+        value="0.442035468767809" />
+      <inertia
+        ixx="0.5"
+        ixy="0.5"
+        ixz="0.5"
+        iyy="0.5"
+        iyz="0.5"
+        izz="0.5" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lego_robot/meshes/visual/Brazo.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lego_robot/meshes/collision/Brazo.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Brazo"
+    type="revolute">
+    <origin
+      xyz="0 0 0.107"
+      rpy="0 0 0" />
+    <parent
+      link="Base" />
+    <child
+      link="Brazo" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.571"
+      upper="1.571"
+      effort="10"
+      velocity="10" />
+  </joint>
+  <link
+    name="Antebrazo">
+    <inertial>
+      <origin
+        xyz="0.0143222614103702 -2.4980018054066E-16 0.0398528294148467"
+        rpy="0 0 0" />
+      <mass
+        value="0.692501299369186" />
+      <inertia
+        ixx="0.5"
+        ixy="0.5"
+        ixz="0.5"
+        iyy="0.5"
+        iyz="0.5"
+        izz="0.5" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lego_robot/meshes/visual/Antebrazo.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lego_robot/meshes/collision/Antebrazo.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Antebrazo"
+    type="revolute">
+    <origin
+      xyz="0 0 0.168"
+      rpy="0 0 0" />
+    <parent
+      link="Brazo" />
+    <child
+      link="Antebrazo" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.7854"
+      upper="0.7854"
+      effort="10"
+      velocity="10" />
+  </joint>
+  <link
+    name="Munieca">
+    <inertial>
+      <origin
+        xyz="0.0452057312013295 2.77555756156289E-17 5.55111512312578E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.156951387678108" />
+      <inertia
+        ixx="0.5"
+        ixy="0.5"
+        ixz="0.5"
+        iyy="0.5"
+        iyz="0.5"
+        izz="0.5" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lego_robot/meshes/visual/Munieca.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lego_robot/meshes/collision/Munieca.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Munieca"
+    type="revolute">
+    <origin
+      xyz="0.135999999999999 0 0.0439999999999997"
+      rpy="0 0 0" />
+    <parent
+      link="Antebrazo" />
+    <child
+      link="Munieca" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.571"
+      upper="1.571"
+      effort="10"
+      velocity="10" />
+  </joint>
+  <link
+    name="Mano">
+    <inertial>
+      <origin
+        xyz="0.0219738946191299 9.71445146547012E-17 5.55111512312578E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0261035180878664" />
+      <inertia
+        ixx="0.5"
+        ixy="0.5"
+        ixz="0.5"
+        iyy="0.5"
+        iyz="0.5"
+        izz="0.5" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lego_robot/meshes/visual/Mano.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lego_robot/meshes/collision/Mano.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Mano"
+    type="revolute">
+    <origin
+      xyz="0.085 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="Munieca" />
+    <child
+      link="Mano" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.571"
+      upper="1.571"
+      effort="10"
+      velocity="10" />
+  </joint>
+  <link
+    name="Dedo">
+    <inertial>
+      <origin
+        xyz="0.00935079076459866 1.38777878078145E-17 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0223692116202994" />
+      <inertia
+        ixx="0.5"
+        ixy="0.5"
+        ixz="0.5"
+        iyy="0.5"
+        iyz="0.5"
+        izz="0.5" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lego_robot/meshes/visual/Dedo.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lego_robot/meshes/collision/Dedo.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Dedo"
+    type="revolute">
+    <origin
+      xyz="0.033 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="Mano" />
+    <child
+      link="Dedo" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.571"
+      upper="1.571"
+      effort="10"
+      velocity="10" />
+  </joint>
+  
+  <link
+    name="Garra1">
+    <inertial>
+      <origin
+        xyz="0.0145806451612933 0.00400000000000064 0.0122580645161277"
+        rpy="0 0 0" />
+      <mass
+        value="0.015872" />
+      <inertia
+        ixx="0.5"
+        ixy="0.5"
+        ixz="0.5"
+        iyy="0.5"
+        iyz="0.5"
+        izz="0.5" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lego_robot/meshes/visual/Garra1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lego_robot/meshes/collision/Garra1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Garra1"
+    type="prismatic">
+    <origin
+      xyz="0.019 -0.012 -0.02"
+      rpy="0 0 0" />
+    <parent
+      link="Dedo" />
+    <child
+      link="Garra1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.5"
+      upper="0.5"
+      effort="10"
+      velocity="10" />
+  </joint>
+  <link
+    name="Garra2">
+    <inertial>
+      <origin
+        xyz="0.0145806451612903 -0.004 -0.012258064516129"
+        rpy="0 0 0" />
+      <mass
+        value="0.015872" />
+      <inertia
+        ixx="0.5"
+        ixy="0.5"
+        ixz="0.5"
+        iyy="0.5"
+        iyz="0.5"
+        izz="0.5" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lego_robot/meshes/visual/Garra2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lego_robot/meshes/collision/Garra2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Garra2"
+    type="prismatic">
+    <origin
+      xyz="0.019 0.012 0.02"
+      rpy="0 0 0" />
+    <parent
+      link="Dedo" />
+    <child
+      link="Garra2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.5"
+      upper="0.5"
+      effort="10"
+      velocity="10" />
+  </joint>
+
+
+</robot>
